@@ -39,7 +39,7 @@ class Printer(PrinterInterface):
                 self.color_printer.print_labels(issue.get('labels', list()))
 
                 if show_description and issue.get('description'):
-                    print(issue['description'])
+                    print((issue['description']))
 
                 print()
         else:
@@ -61,7 +61,7 @@ class Printer(PrinterInterface):
                 if issue.get('labels'):
                     self.color_printer.print_labels(issue['labels'])
 
-                print(issue['description']['body'])
+                print((issue['description']['body']))
                 print('\n')
         else:
             print('No issue could be found.')
@@ -79,7 +79,7 @@ class Printer(PrinterInterface):
                 date = 'Date: {0}'.format(comment['created_at'])
                 self.color_printer.print_colored_line(date, self.COMMENT_DATE_COLOR)
 
-                print('\n{0}\n\n'.format(comment['body']))
+                print(('\n{0}\n\n'.format(comment['body'])))
 
         else:
             print('No comment could be found.')
@@ -90,4 +90,4 @@ class Printer(PrinterInterface):
         :param error: The error to print.
         """
         self.color_printer.print_colored_line('Error', self.ERROR_COLOR)
-        print(error + '\n')
+        print((error + '\n'))

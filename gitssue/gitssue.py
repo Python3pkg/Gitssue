@@ -9,8 +9,8 @@ sys.path.insert(0, os.getcwd())
 from cement.core.foundation import CementApp
 from cement.ext.ext_argparse import ArgparseController, expose
 
-from gitssue.dependencies.dependencies import Dependencies
-from gitssue.controller.controller import Controller
+from .gitssue.dependencies.dependencies import Dependencies
+from .gitssue.controller.controller import Controller
 
 
 class BaseController(ArgparseController):

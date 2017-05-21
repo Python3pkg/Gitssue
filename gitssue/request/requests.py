@@ -2,8 +2,8 @@
 Concrete implementation requests_interface, using "requests" module.
 """
 import json
-import requests
-from requests.exceptions import RequestException
+from . import requests
+from .requests.exceptions import RequestException
 from gitssue.request.request_interface import RequestInterface
 from gitssue.request.unsuccessful_http_request_exception import UnsuccessfulHttpRequestException
 
